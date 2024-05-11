@@ -6,66 +6,12 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-
-      {/* <View style={styles.card}>
-        <View style={styles.content}>
-          <Text>Hello World</Text>
-        </View>
-      </View> */}
-
-
-      {/* Belajar FlexBox */}
-      {/* 1. Kotak Urut ke bawah */}
-      <View style={styles.wrapperAtas}>
-        {/* Kotak Merah */}
-        <View style={styles.merah}>
-          <Text>Merah</Text>
-        </View >
-        {/* Kotak Biru */}
-        <View style={styles.biru}>
-          <Text>Biru</Text>
-        </View>
-        {/* Kotak Hijau */}
-        <View style={styles.hijau}>
-          <Text>Hijau</Text>
-        </View>
+      <View style={styles.card}>
+        <Text>Border</Text>
       </View>
 
-      {/* 2. Kotak Urut ke samping */}
-      <View style={styles.wrapperKotak}>
-        {/* Kotak Merah */}
-        <View style={styles.merah}>
-          <Text>Merah</Text>
-        </View >
-        {/* Kotak Biru */}
-        <View style={styles.biru}>
-          <Text>Biru</Text>
-        </View>
-        {/* Kotak Hijau */}
-        <View style={styles.hijau}>
-          <Text>Hijau</Text>
-        </View>
+      <View style={styles.garis}>
       </View>
-
-      {/* 3. Kotak Urut samping ke tengah */}
-      <View style={styles.wrapperTengah}>
-        {/* Kotak Merah */}
-        <View style={styles.merah}>
-          <Text>Merah</Text>
-        </View >
-        {/* Kotak Biru */}
-        <View style={styles.biru}>
-          <Text>Biru</Text>
-        </View>
-        {/* Kotak Hijau */}
-        <View style={styles.hijau}>
-          <Text>Hijau</Text>
-        </View>
-      </View>
-
-
-
-
     </View>
   );
 }
@@ -75,45 +21,24 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     marginTop: 30,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  merah: {
-    backgroundColor: 'red',
+  card: {
     width: 100,
     height: 100,
-  },
-  biru: {
-    backgroundColor: 'blue',
-    width: 100,
-    // height: 70
-    height: 100
-
-  },
-  hijau: {
-    backgroundColor: 'green',
-    width: 100,
-    height: 100
-  },
-  wrapperAtas: {
     alignItems: 'center',
-    backgroundColor: 'yellow',
-    flex:1,
-    justifyContent:'center',
-  },
-  wrapperKotak: {
-    flexDirection: 'row', 
-    justifyContent: 'flex-end',
-  },
-  wrapperTengah: {
-    flexDirection: 'row',
     justifyContent: 'center',
-    // alignItems: 'center',
+    borderWidth: 2,
+    borderStyle: 'dotted',
+    // borderRadius: 16,
+    // borderTopRightRadius:20,
+    // borderTopLeftRadius:20
+    // borderBottomEndRadius:10,
+  },
+  garis: {
+    borderWidth: 1,
+    width: 300,
+    marginTop: 10,
   }
-  // card: {
-  //   backgroundColor: 'red',
-  //   padding: 30,
-  //   margin: 20,
-  // },
-  // content: {
-  //   backgroundColor: 'yellow',
-  // }
 });
