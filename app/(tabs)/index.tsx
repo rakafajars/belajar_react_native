@@ -6,13 +6,33 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.card}>
-        <Text>Border</Text>
+
+      {/* Override Style */}
+      <View>
+        <View style={[styles.card, {
+          backgroundColor: 'red'
+        }]}></View>
+        <View style={[styles.card, {
+          backgroundColor: 'blue'
+        }]}></View>
+        <View style={[styles.card, {
+          backgroundColor: 'green'
+        }]}></View>
       </View>
 
-      <View style={styles.garis}>
+      {/* Use variable */}
+
+
+      <View>
+        <View style={styles.card2('red')}></View>
+        <View style={styles.card2('blue')}></View>
+        <View style={styles.card2('green')}></View>
+
       </View>
+ 
     </View>
+
+
   );
 }
 
@@ -21,24 +41,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     marginTop: 30,
-    alignItems: 'center',
-    justifyContent: 'center'
   },
-  card: {
-    width: 100,
-    height: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 2,
-    borderStyle: 'dotted',
-    // borderRadius: 16,
-    // borderTopRightRadius:20,
-    // borderTopLeftRadius:20
-    // borderBottomEndRadius:10,
-  },
-  garis: {
-    borderWidth: 1,
-    width: 300,
-    marginTop: 10,
-  }
 });
